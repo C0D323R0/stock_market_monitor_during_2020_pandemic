@@ -1,0 +1,294 @@
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChartStock);
+
+const csv = `Date,Open + Close /2
+28 May 2019,39757.68555
+29 May 2019,39608.16016
+30 May 2019,39706.125
+31 May 2019,39856.55469
+3 June 2019,40037.24023
+4 June 2019,40139.76953
+6 June 2019,39833.07422
+7 June 2019,39598.83398
+10 June 2019,39785.92383
+11 June 2019,39925.45508
+12 June 2019,39865.49414
+13 June 2019,39710.35547
+14 June 2019,39624.53516
+17 June 2019,39237.57422
+18 June 2019,39051.66016
+19 June 2019,39144.64844
+20 June 2019,39322.29492
+21 June 2019,39401.36914
+24 June 2019,39141.5957
+25 June 2019,39283.44141
+26 June 2019,39485.60352
+27 June 2019,39610.18945
+28 June 2019,39512.58008
+1 July 2019,39615.11523
+2 July 2019,39814.08008
+3 July 2019,39873.41016
+4 July 2019,39912.85352
+5 July 2019,39751.89453
+8 July 2019,39098.47461
+9 July 2019,38742.64453
+10 July 2019,38629.51367
+11 July 2019,38787.36523
+12 July 2019,38838.66602
+15 July 2019,38953.33008
+16 July 2019,39046.44922
+17 July 2019,39193.37109
+18 July 2019,39050.96484
+19 July 2019,38697.87109
+22 July 2019,38182.32422
+23 July 2019,38060.64844
+24 July 2019,37918.93945
+25 July 2019,37883
+26 July 2019,37856.98438
+29 July 2019,37864.79492
+30 July 2019,37566.38867
+31 July 2019,37369.33594
+1 August 2019,37202.75
+2 August 2019,37019.16406
+5 August 2019,36771.00586
+6 August 2019,36772.44141
+7 August 2019,36857.88477
+8 August 2019,37067.68555
+9 August 2019,37551.60547
+13 August 2019,37356.66016
+14 August 2019,37272.51563
+16 August 2019,37366.66406
+19 August 2019,37444.20508
+20 August 2019,37384.88086
+21 August 2019,37179.55078
+22 August 2019,36780.25391
+23 August 2019,36544.41992
+26 August 2019,37429.03516
+27 August 2019,37649.875
+28 August 2019,37553.80469
+29 August 2019,37225.36523
+30 August 2019,37277.52539
+3 September 2019,36872.33594
+4 September 2019,36649.98828
+5 September 2019,36733.06641
+6 September 2019,36883.67969
+9 September 2019,37057.46484
+11 September 2019,37260.92578
+12 September 2019,37217.375
+13 September 2019,37280.42383
+16 September 2019,37163.93359
+17 September 2019,36825.27539
+18 September 2019,36592.62891
+19 September 2019,36353.69922
+20 September 2019,37114.77148
+23 September 2019,38967.01563
+24 September 2019,39116.21094
+25 September 2019,38840.35938
+26 September 2019,38845.10938
+27 September 2019,38912.84961
+30 September 2019,38770.22461
+1 October 2019,38559.44531
+3 October 2019,38122.37109
+4 October 2019,38037.39844
+7 October 2019,37692.89063
+9 October 2019,37903
+10 October 2019,38005.31445
+11 October 2019,38060.7793
+14 October 2019,38211.35352
+15 October 2019,38411.28906
+16 October 2019,38618.01953
+17 October 2019,38849.75
+18 October 2019,39193.10352
+22 October 2019,39098.61914
+23 October 2019,39061.33398
+24 October 2019,39121.70117
+25 October 2019,39129.86523
+27 October 2019,#VALUE!
+29 October 2019,39562.66406
+30 October 2019,40053.75
+31 October 2019,40170.51953
+1 November 2019,40180.55078
+4 November 2019,40297.90625
+5 November 2019,40346.95117
+6 November 2019,40390.81641
+7 November 2019,40639.68945
+8 November 2019,40477.08398
+11 November 2019,40330.78906
+13 November 2019,40231.24414
+14 November 2019,40232.70508
+15 November 2019,40382.44531
+18 November 2019,40357.63477
+19 November 2019,40462.5293
+20 November 2019,40690.7207
+21 November 2019,40656.24023
+22 November 2019,40506.29102
+25 November 2019,40664.44531
+26 November 2019,40922.07617
+27 November 2019,41000
+28 November 2019,41145.85547
+29 November 2019,40966.03516
+2 December 2019,40937.55664
+3 December 2019,40764.0293
+4 December 2019,40728.15039
+5 December 2019,40883.86523
+6 December 2019,40698.63867
+9 December 2019,40507.33398
+10 December 2019,40414.34375
+11 December 2019,40348.88477
+12 December 2019,40571.52539
+13 December 2019,40882.26563
+16 December 2019,41053.78516
+17 December 2019,41202.26563
+18 December 2019,41500.66016
+19 December 2019,41622.87109
+20 December 2019,41713.86914
+23 December 2019,41595.46094
+24 December 2019,41572.88672
+26 December 2019,41353.78125
+27 December 2019,41436.10938
+30 December 2019,41622.13477
+31 December 2019,41430.61328
+1 January 2020,#VALUE!
+2 January 2020,41483.45508
+3 January 2020,41549.56055
+6 January 2020,41027.48438
+7 January 2020,40926.25391
+8 January 2020,40696.2832
+9 January 2020,41334.51172
+10 January 2020,41583.95898
+13 January 2020,41823.95117
+14 January 2020,41917.85938
+15 January 2020,41921.29492
+16 January 2020,41928.64844
+17 January 2020,41937.19531
+20 January 2020,41895.95508
+21 January 2020,41405.68945
+22 January 2020,41291.25391
+23 January 2020,41288.94922
+24 January 2020,41495.11523
+27 January 2020,41332.90039
+28 January 2020,41133.26953
+29 January 2020,41165.11523
+30 January 2020,41146.98047
+31 January 2020,40935.02344
+3 February 2020,39786.66406
+4 February 2020,40484.05859
+5 February 2020,41032.18555
+6 February 2020,41257.58008
+7 February 2020,41268.13086
+10 February 2020,41073.16992
+11 February 2020,41199.76563
+12 February 2020,41448.375
+13 February 2020,41583.5
+14 February 2020,41383.96484
+17 February 2020,41189.86523
+18 February 2020,40968.41992
+19 February 2020,41222.25586
+20 February 2020,41252.54102
+24 February 2020,40700.12109
+25 February 2020,40389.45898
+26 February 2020,40041.92578
+27 February 2020,39846.73047
+28 February 2020,38692.37891
+2 March 2020,38527.48438
+3 March 2020,38552.29492
+4 March 2020,38562.59961
+5 March 2020,38537.42969
+6 March 2020,37595.29102
+9 March 2020,36292.57422
+11 March 2020,35583.14844
+12 March 2020,33625.32031
+13 March 2020,32658.80566
+16 March 2020,32246.6543
+17 March 2020,31095.33008
+18 March 2020,29919.17481
+19 March 2020,28030.79492
+20 March 2020,29188.39063
+23 March 2020,26795.02051
+24 March 2020,26865.12988
+25 March 2020,27517.79492
+26 March 2020,29510.24023
+27 March 2020,30281.7002
+30 March 2020,28833.43555
+31 March 2020,29381.71484
+1 April 2020,28885.32031
+3 April 2020,28107.23926
+7 April 2020,29482.78516
+8 April 2020,29797.94043
+9 April 2020,30865.4043
+13 April 2020,30942.87012
+15 April 2020,30828.45996
+16 April 2020,30349.05957
+17 April 2020,31622.7002
+20 April 2020,31852.09473
+21 April 2020,30736.4502
+22 April 2020,31117.8457
+23 April 2020,31754.76465
+24 April 2020,31376.91992
+27 April 2020,31701.05957
+28 April 2020,32108.21484
+29 April 2020,32515.59961
+30 April 2020,33549.40625
+4 May 2020,32231.74512
+5 May 2020,31818.20508
+6 May 2020,31631.69043
+7 May 2020,31560.53516
+8 May 2020,31863.00977
+11 May 2020,31795.78027
+12 May 2020,31357.02441
+13 May 2020,32425.24023
+14 May 2020,31294.61035
+15 May 2020,31197.00488
+18 May 2020,30638.62012
+19 May 2020,30323.45508
+20 May 2020,30489.09961
+21 May 2020,30918.59473
+22 May 2020,30747.68457
+26 May 2020,30736.78516
+27 May 2020,31199.16504
+28 May 2020,32014.19531`
+
+function convertCSVToJSON(str, delimiter = ',') {
+    let titles = str.slice(0, str.indexOf('\n')).split(delimiter);
+    titles = [titles];
+    const rows = str.slice(str.indexOf('\n') + 1).split('\n');
+    return titles.concat(rows.map(row => {
+        const values = row.split(delimiter).map(x=>{
+            return +x || x;
+        });
+        return values;
+        //titles.reduce((object, curr, i) => (object[curr] = values[i], object), {})
+        })
+    );
+};
+
+// this has to be a global function
+function drawChartStock() {
+
+            // transform the CSV string into a 2-dimensional array
+            var arrayData = convertCSVToJSON(csv);
+
+            console.log(arrayData);
+            // this new DataTable object holds all the data
+            var data = new google.visualization.arrayToDataTable(arrayData);
+      
+            // this view can select a subset of the data at a time
+            var view = new google.visualization.DataView(data);
+            // view.setColumns([0,1]);
+      
+           // set chart options
+           var options = {
+              title: "Stock Market",
+              curveType: 'function',
+              legend: { position: 'bottom' }
+
+            //   hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
+            //   vAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+            //   legend: 'none'
+           };
+      
+           // create the chart object and draw it
+           var chart = new google.visualization.LineChart(document.getElementById('stock_chart'));
+           chart.draw(view, options);
+}
+

@@ -6,6 +6,7 @@
 	<link href="main.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--Google chart import-->
 	<script type="text/javascript" src="graph_script.js"></script>
+    <script type="text/javascript" src="stock_script.js"></script>
 </head>
 <body>
 	
@@ -46,7 +47,9 @@
 			</tr>
 		</table>
 	</div>
-
+	<!--Graph of BSE SENSEX OPEN+CLOSE /2.-->
+	<div id="stock_chart" style="width: 600px; height: 300px; float: right; margin-right: 200px; margin-top: 20px;">
+	</div>
 	<!--Graph of Covid nos.-->
 	<div id="curve_chart" style="width: 600px; height: 300px">
 	</div>
@@ -93,6 +96,8 @@
 			</td>
 		</tr>
 	</table>
+
+	
 
 	<p id="analysis">
 		This box will display our prediction/analysis.
