@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Stock Market Monitor </title>
+	<link href="nav_bar.css" type="text/css" rel="stylesheet">
+	<link href="main.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--Google chart import-->
+	<script type="text/javascript" src="graph_script.js"></script>
+</head>
+<body>
+	
+	<!--Navigation Bar-->
+	<div class="sidenav">
+	  <a href="index.html">Home</a>
+	  <a href="#">SENSEX</a>
+	  <a href="#">Business Data</a>
+	  <a href="#">About Us</a>
+	</div>
+
+	<!--Main Page-->
+
+	<!--The box for the total corona nos.-->
+	<div class='covid_data'> 
+		<table class='covid_table'>
+			<tr>
+				<th>Infected</th>
+				<th>Recovered</th>
+				<th>Deaths</th>
+			</tr>
+			<tr>
+				<td class='Infected'>
+					<img src="Pictures/barchart.webp" height="20px" width="30px">
+					<text id="main_text">1,51,876</text>
+					<text id="increase">+5843</text>
+				</td>
+				<td class="recovery">
+					<img src="Pictures/barchart.webp" height="20px" width="30px">
+					<text id="main_text">64,426</text>
+					<text id="increase">+3571</text>
+				</td>
+				<td class='death'>
+					<img src="Pictures/barchart.webp" height="20px" width="30px">
+					<text id="main_text">4,346</text>
+					<text id="increase">+172</text>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!--Graph of Covid nos.-->
+	<div id="curve_chart" style="width: 600px; height: 300px">
+	</div>
+
+	<!--Top five covid states in India.-->
+	<table id="states">
+		<tr>
+			<th> State </th>
+			<th> Confirmed </th>
+		</tr>
+		<tr>
+			<td> Maharashtra </td>
+			<td> 
+				<text> 52,667 </text>
+				<text id="increase"> +2,436 </text>
+			</td>
+		</tr>
+		<tr>
+			<td> Tamil Nadu </td>
+			<td>
+			<text> 17,082 </text>
+			<text id="increase"> +805 </text>
+		</td>
+		</tr>
+		<tr>
+			<td> Gujarat </td>
+			<td>
+			<text> 14,460 </text>
+			<text id="increase"> +404 </text>
+		</td>
+		</tr>
+		<tr>
+			<td> Delhi </td>
+			<td>
+			<text> 14,053 </text>
+			<text id="increase"> +635 </text>
+			</td>
+		</tr>
+		<tr>
+			<td> Rajasthan </td>
+			<td>
+				<text>7,300</text>
+				<text id="increase"> +272</text>
+			</td>
+		</tr>
+	</table>
+
+	<p id="analysis">
+		This box will display our prediction/analysis.
+	</p>
+
+</body>
+</html>

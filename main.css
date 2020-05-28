@@ -1,0 +1,67 @@
+body{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	background-color: rgba(243,236,236,0.84);
+}
+
+.covid_data{
+	height: 150px;
+	width: 700px;	
+	margin-left: 100px;
+}
+
+.covid_table{
+	margin-left: 100px;
+	text-indent: 10px;
+	padding: 15px;
+	height: 26%;
+	width: 100%;	
+	padding-top: 7.5%;
+	padding-left: 25%;
+}
+
+th{
+	background-color: #d2d2e2;
+	text-align: center;
+	font-size: 24px;
+}
+
+td{
+	background-color: white;
+	font-size: 20px;
+	padding-left: 5px;
+}
+
+#increase{
+	margin-left: 10px;
+	font-size: 10px;
+	color:#808080;
+}
+
+#main_text{
+	margin-left: 7px;	
+}
+
+#curve_chart{
+	margin-top: 20px;
+	margin-left: 145px;
+	height: 300px;
+	width: 600px;
+}
+
+#states{
+	position: absolute;
+	top: 177px;
+	height: 300px;
+	margin-left: 850px;
+}
+
+#analysis{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 40px;
+	background-color: white;
+	margin-left: 143px;
+	width: 76%;
+	height: 70px;
+	padding-top: 10px;
+}
