@@ -42,6 +42,7 @@ td{
 }
 
 #curve_chart{
+	position: absolute;
 	margin-top: 20px;
 	margin-left: 145px;
 	height: 300px;
@@ -58,10 +59,18 @@ td{
 #analysis{
 	text-align: center;
 	font-size: 25px;
-	margin-top: 40px;
+	margin-top: 20px;
 	background-color: white;
 	margin-left: 143px;
 	width: 76%;
 	height: 70px;
 	padding-top: 10px;
+}
+
+#stock_chart{
+	float: center;
+	width:925px;
+	height:300px;
+	margin-left: 145px;
+	margin-top: 350px;
 }
