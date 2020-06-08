@@ -1,0 +1,45 @@
+body{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	background-color: rgba(243,236,236,0.84);
+}
+
+#head{
+	background-color: #d2d2e2;
+	font-size: 24px;
+	padding-top: 15px;
+	width: 1015px;
+	height: 40px;
+}
+
+
+#first{
+	margin-left: 150px;
+	padding-right: 15px;
+	background-color: white;
+	margin-top: 15px;
+	height: 170px;
+	width: 1000px;
+	font-size: 18px;
+}
+
+#impact{
+	padding-left: 15px;
+}
+
+#graph_head{
+	margin-top: 25px;
+	background-color: #d2d2e2;
+	font-size: 18px;
+	margin-left: 150px;
+	width: 1015px;
+}
+
+#prediction{
+	font-size: 24px;
+	padding-top: 15px;
+	text-align: center;
+	margin-left: 150px;
+	background-color: white;
+	height: 80px;
+	width: 1015px;
+}
