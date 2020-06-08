@@ -56,16 +56,6 @@ td{
 	margin-left: 850px;
 }
 
-#analysis{
-	text-align: center;
-	font-size: 25px;
-	margin-top: 20px;
-	background-color: white;
-	margin-left: 143px;
-	width: 76%;
-	height: 70px;
-	padding-top: 10px;
-}
 
 #stock_chart{
 	float: center;
@@ -74,3 +64,30 @@ td{
 	margin-left: 145px;
 	margin-top: 350px;
 }
+
+#ques{
+	margin-top: 25px;
+	background-color: #d2d2e2;
+	font-size: 18px;
+	height: 28px;
+	font-weight: bold;
+	margin-left: 145px;
+	width: 915px;
+	padding-left: 10px;
+}
+
+
+#analysis{
+	font-size: 16px;
+	background-color: white;
+	margin-left: 143px;
+	width: 76%;
+	height: 620px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+#h1{
+	font-weight: bold;
+}
+
