@@ -14,7 +14,7 @@
 	<div class="sidenav">
 	  <a href="index.html">Home</a>
 	  <a href="BusinessData.html">SENSEX</a>
-	  <a href="#">About Us</a>
+	  <a href="aboutus.html">About Us</a>
 	</div>
 
 	<!--Main Page-->
@@ -100,31 +100,35 @@
 
 	<p id="ques"> IS THE SENSEX AFFECTED BY COVID </p>
 	
+	<table id="nos">
+	<tr>
+		<th> Time Period</th>
+		<th> 'R'-Value </th>
+		<th> 'P'-Value </th>
+	</tr>
+	<tr> 
+		<td><text> Pre-Lockdown </text><br><text id="increase">28th Feb to 23rd March</text></td>
+		<td>-0.701</td>
+		<td>0.00361</td>
+	</tr>
+	<tr>
+		<td><text> Lockdown 1.0 & 2.0 </text><br><text id="increase">23rd March to 02nd May</text></td>
+		<td>0.807</td>
+		<td>6e-6</td>
+	</tr>
+	<tr>
+		<td><text> Lockdown 3.0 & 4.0 </text><br><text id="increase">02nd May to 28th May</text></td>
+		<td><center>-</center></td>
+		<td>0.135</td>
+	</tr>
+</table>
 
-	<div id="analysis">
-		The second biggest question of the pandemic, was how would it affect national economies? It would be bad as businesses would jam up but, how bad? <br>
-		To study the pandemic's effect in our country, SENSEX is a good a measure. But, as SENSEX is prone to many enviornmental changes, we would've to correlate SENSEX's rise and fall with Covid-19 stats in India. 
-		<p id="whole_event">
-		<text id="h1"> From INITIATION To JUNE:</text>
-		<br>
-		Now, if we see it as a whole one big event the correlation is very weak, but it isn't NULL. The pearson's coefficient for corelations comes out to be around <i>-0.402</i>, which would show that the both events have a very weak negative correlation, but it can't be counted as NULL & void as the 'p' value which should've been >0.05 for it to be NULL, is calculated to approximately <i>0.000264</i></p>
-		<p id="pre_panic">
-			But, every event has different time-periods to it, different moods and different effects, so let's divide them up and calculate.<br>
-			<text id="h1"> PRE-PANIC:</text><br>
-			This is the time-period b/w 30th Jan to 27th Feb. In this time, India had counted only 3 cases and there was hardly any coverage on COVID, in this time-period Covid was hardly any event which could effect the market.
-		</p>
-		<p id="international">
-			<text id="h1">EUROPEAN PANIC:</text><br>
-			This time-period can be counted as the period b/w 28th Feb to 23rd March. In march beginning, Italy started to report horrific stats of covid infections, the world started to prepare the biological siege, many countries started to publish quarantine guidelines, the WHO declares pandemic and SENSEX starts falling, SENSEX continues falling for 24 days straight before coming to an halt on 26,700 pts. This is the time-period when national covid stats and sensex start showing almost high correlation, the pearson's coefficient in this time-period b/w daily infection and closing pts. of SENSEX comes around to <i>-0.701</i>. Also, the NULL hypothesis can be rejected as the 'p-value' still hovers around <i> 0.00361</i>.</p>
-		<p id="lockdown">
-			<text id="h1">LOCKDOWN</text><br>
-			On 23rd March, India begins national quarantine labelled 'Lockdown'. Lockdown and Lockdown 2.0 which lasted from 23rd March to 02nd May, were very strict and this was the time when the National market suffered and clammed up. And, this is the time when infection and death rates have the highest correlation with SENSEX, the pearson's coeff. b/w closing and infection pts. daily comes around to  <i>0.807</i>, while closing and daily death show a co-relation of <i>0.837</i>. And, the 'p-value' is of micro-order.</p>
-		<p id="May">
-			<text id="h1">MAY:</text>
-			<br>
-			Now, in may, the govt. handles the situation using stimulus to SENSEX and MSEs, and SENSEX also starts stabilising, and no co-relation exists between covid stats and SENSEX as the pearson's 'p-value' becomes almost triple the acceptable mark, i.e <i>0.135</i>.
-		</p>
-	</div>
+<div id="text_analysis">
+	<p> <b> 'R'-Value:</b> The R value signifies how much co-relation exists b/w two seprate datas. If R>0.7 or R<-0.7: strong correlation, 0.7>R>0.4 or similarly in negative, moderate correlation, and any other value means weak correlation.</p>
+	<p> <b> 'P'-Value:</b> The P value signifies if the correlation even exists at all, if p>0.05, the correlation is almost worthless.</p>
 
+	<p> Hence, from the above table it can be seen that during pre-lockdown and Ist and IInd lockdown, SENSEX and covid had the most correlation, even though during the Ist and IInd lockdown the movement was of the opposite trend than what might have been expected, but there was significant strong correlation between both.</p>
+	<p> But, in the month of May, SENSEX was able to stabilise against rising Covid trends, and no significant correlation can be seen as the p value is much higher than the applicable value.</p>
+</div>
 </body>
 </html>
