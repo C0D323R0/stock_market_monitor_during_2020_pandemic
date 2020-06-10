@@ -1,0 +1,74 @@
+body{
+  background-color: rgba(243,236,236,0.84);
+  margin-left: 120px;
+}
+
+.masthead,
+#intro{
+  background-color: #d2d2e2;
+}
+
+.introduction-section{
+  background-color:white;
+  padding-left: 10px;
+  height: 210px;
+  padding-top: 1px;
+}
+
+#intro{padding-left: 10px;
+height: 28px;}
+
+.masthead{
+  text-align: center;
+  height: 40px;
+}
+
+.content-footer > p {
+  color: #F7EDE1;
+}
+.content-footer {
+  margin: 50px 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #73A8C2;
+  text-decoration: none;
+}
+
+.location-section{
+  background-color: #d2d2e2;
+  height: 35px;
+}
+
+
+.Rishabh,
+.Arjun,
+.Shishir,
+.Abhinav,
+.Arihant{
+  margin-top: 15px;
+  background-color: white;
+  height: 270px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 15px;
+}
+
+#name{
+  padding-top: 4px;
+  font-size: 22px;
+  background-color: #71b6e8;
+  width: 200px;
+  display: inline-block;
+  height: 30px;
+}
+
+
+#mail1{
+  font-weight: bold;
+  text-decoration: none;
+  color: #F1C863;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
