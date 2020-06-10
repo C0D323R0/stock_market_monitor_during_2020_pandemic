@@ -76,18 +76,20 @@ td{
 	padding-left: 10px;
 }
 
-
-#analysis{
-	font-size: 16px;
-	background-color: white;
-	margin-left: 143px;
-	width: 76%;
-	height: 620px;
-	padding-top: 5px;
-	padding-left: 10px;
-}
-
 #h1{
 	font-weight: bold;
+}
+
+#nos{
+	position: absolute;
+	margin-left: 400px;
+}
+
+#text_analysis{
+	background-color: white;
+	margin-top: 240px;
+	width:930px;
+	margin-left: 143px;
+	height: 220px;
 }
 
